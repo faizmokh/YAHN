@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		9800C2EC243448F2001CE1B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C2EB243448F2001CE1B7 /* AppDelegate.swift */; };
 		9800C2EE243448F2001CE1B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C2ED243448F2001CE1B7 /* SceneDelegate.swift */; };
-		9800C2F0243448F2001CE1B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C2EF243448F2001CE1B7 /* ContentView.swift */; };
 		9800C2F2243448F4001CE1B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F1243448F4001CE1B7 /* Assets.xcassets */; };
 		9800C2F5243448F4001CE1B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F4243448F4001CE1B7 /* Preview Assets.xcassets */; };
 		9800C2F8243448F4001CE1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F6243448F4001CE1B7 /* LaunchScreen.storyboard */; };
 		9800C303243448F4001CE1B7 /* YAHNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C302243448F4001CE1B7 /* YAHNTests.swift */; };
+		987854F62438E150004E8792 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F52438E150004E8792 /* API.swift */; };
+		987854F92438E2F4004E8792 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F82438E2F4004E8792 /* Story.swift */; };
+		987854FE2438E599004E8792 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854FD2438E599004E8792 /* StoriesView.swift */; };
+		987855002438E5AB004E8792 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854FF2438E5AB004E8792 /* StoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,6 @@
 		9800C2E8243448F2001CE1B7 /* YAHN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAHN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9800C2EB243448F2001CE1B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9800C2ED243448F2001CE1B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9800C2EF243448F2001CE1B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9800C2F1243448F4001CE1B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9800C2F4243448F4001CE1B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9800C2F7243448F4001CE1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		9800C2FE243448F4001CE1B7 /* YAHNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAHNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9800C302243448F4001CE1B7 /* YAHNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAHNTests.swift; sourceTree = "<group>"; };
 		9800C304243448F4001CE1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987854F52438E150004E8792 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		987854F82438E2F4004E8792 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		987854FD2438E599004E8792 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		987854FF2438E5AB004E8792 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,11 @@
 		9800C2EA243448F2001CE1B7 /* YAHN */ = {
 			isa = PBXGroup;
 			children = (
+				987854FA2438E53B004E8792 /* Scenes */,
+				987854F72438E2AF004E8792 /* Models */,
+				987854F42438DF83004E8792 /* API */,
 				9800C2EB243448F2001CE1B7 /* AppDelegate.swift */,
 				9800C2ED243448F2001CE1B7 /* SceneDelegate.swift */,
-				9800C2EF243448F2001CE1B7 /* ContentView.swift */,
 				9800C2F1243448F4001CE1B7 /* Assets.xcassets */,
 				9800C2F6243448F4001CE1B7 /* LaunchScreen.storyboard */,
 				9800C2F9243448F4001CE1B7 /* Info.plist */,
@@ -105,6 +113,31 @@
 				9800C304243448F4001CE1B7 /* Info.plist */,
 			);
 			path = YAHNTests;
+			sourceTree = "<group>";
+		};
+		987854F42438DF83004E8792 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				987854F52438E150004E8792 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		987854F72438E2AF004E8792 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				987854F82438E2F4004E8792 /* Story.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		987854FA2438E53B004E8792 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				987854FF2438E5AB004E8792 /* StoriesViewModel.swift */,
+				987854FD2438E599004E8792 /* StoriesView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +243,10 @@
 			files = (
 				9800C2EC243448F2001CE1B7 /* AppDelegate.swift in Sources */,
 				9800C2EE243448F2001CE1B7 /* SceneDelegate.swift in Sources */,
-				9800C2F0243448F2001CE1B7 /* ContentView.swift in Sources */,
+				987854FE2438E599004E8792 /* StoriesView.swift in Sources */,
+				987855002438E5AB004E8792 /* StoriesViewModel.swift in Sources */,
+				987854F62438E150004E8792 /* API.swift in Sources */,
+				987854F92438E2F4004E8792 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
 				INFOPLIST_FILE = YAHNTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,7 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
 				INFOPLIST_FILE = YAHNTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
