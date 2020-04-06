@@ -9,23 +9,22 @@ struct StoriesView: View {
     }
 
     var body: some View {
-        List {
-            ForEach(self.viewModel.stories) { story in
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(story.title)
-                        .frame(minHeight: 0, maxHeight: 100)
-                        .font(.title)
-                    Button(story.url) {
-                        print(story)
+        NavigationView {
+            List {
+                ForEach(self.viewModel.stories) { story in
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(story.title)
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                        Text("\(story.score) points by \(story.by) | \(story.descendants) comments")
+                            .font(.footnote)
+                            .fontWeight(.regular)
                     }
-                    .font(.subheadline)
-                    .foregroundColor(Color.blue)
-                    .padding(.top, 6)
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 }
-                .padding()
             }
+            .navigationBarTitle(Text("Top Stories"))
         }
-        .navigationBarTitle(Text("Top Stories"))
         .onAppear(perform: viewModel.fetchStories)
     }
 }

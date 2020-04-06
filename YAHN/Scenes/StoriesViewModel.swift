@@ -4,12 +4,10 @@ import SwiftUI
 
 class StoriesViewModel: ObservableObject {
     private let api = API()
-    private var topStories = [Story]()
+
+    @Published var stories: [Story] = [Story]()
     @Published var error: API.Error? = nil
 
-    var stories: [Story] {
-        return topStories
-    }
 
     @Published private var subscriptions = Set<AnyCancellable>()
 
@@ -21,7 +19,7 @@ class StoriesViewModel: ObservableObject {
                     self.error = error
                 }
             }, receiveValue: { stories in
-                self.topStories = stories
+                self.stories = stories
             })
             .store(in: &subscriptions)
     }

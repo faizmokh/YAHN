@@ -5,7 +5,7 @@ import SwiftUI
 struct API {
 
     private let decoder = JSONDecoder()
-    private let apiQueue = DispatchQueue(label: "API", qos: .default, attributes: .concurrent)
+    private let apiQueue = DispatchQueue(label: "hn-api", qos: .default, attributes: .concurrent)
 
     enum EndPoint {
         static let baseURL = URL(string: "https://hacker-news.firebaseio.com/v0/")!
@@ -16,7 +16,7 @@ struct API {
         var url: URL {
             switch self {
             case .topStories:
-                return EndPoint.baseURL.appendingPathComponent("newstories.json")
+                return EndPoint.baseURL.appendingPathComponent("topstories.json")
             case .story(let id):
                 return EndPoint.baseURL.appendingPathComponent("item/\(id).json")
             }
@@ -46,6 +46,8 @@ struct API {
     }
 
     func mergedStories(ids storyIDs: [Int]) -> AnyPublisher<Story, Error> {
+        let storyIDs = Array(storyIDs.prefix(20))
+
         precondition(!storyIDs.isEmpty)
 
         let initialPublisher = story(id: storyIDs[0])
