@@ -8,6 +8,9 @@ class StoriesViewModel: ObservableObject {
     @Published var stories: [Story] = [Story]()
     @Published var error: API.Error? = nil
 
+    init(stories: [Story] = [Story]()) {
+        self.stories = stories
+    }
 
     @Published private var subscriptions = Set<AnyCancellable>()
 
