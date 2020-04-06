@@ -12,21 +12,23 @@ struct StoriesView: View {
         NavigationView {
             List {
                 ForEach(self.viewModel.stories) { story in
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(story.title)
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                        if self.getHostDomain(url: story.url) != nil {
-                            Text(self.getHostDomain(url: story.url) ?? "")
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                                .foregroundColor(.gray)
+                    NavigationLink(destination: CommentsView(viewModel: CommentsViewModel(story: story))) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(story.title)
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                            if self.getHostDomain(url: story.url) != nil {
+                                Text(self.getHostDomain(url: story.url) ?? "")
+                                    .font(.subheadline)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.gray)
+                            }
+                            Text("\(story.score) points by \(story.by) | \(story.descendants) comments")
+                                .font(.footnote)
+                                .fontWeight(.regular)
                         }
-                        Text("\(story.score) points by \(story.by) | \(story.descendants) comments")
-                            .font(.footnote)
-                            .fontWeight(.regular)
+                        .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                     }
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 }
             }
             .navigationBarTitle(Text("Top Stories"))
