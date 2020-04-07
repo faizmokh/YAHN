@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		9800C2F5243448F4001CE1B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F4243448F4001CE1B7 /* Preview Assets.xcassets */; };
 		9800C2F8243448F4001CE1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F6243448F4001CE1B7 /* LaunchScreen.storyboard */; };
 		9800C303243448F4001CE1B7 /* YAHNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C302243448F4001CE1B7 /* YAHNTests.swift */; };
+		9861DD20243CC5610069DDBA /* TimelaneCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 9861DD1F243CC5610069DDBA /* TimelaneCombine */; };
 		987854F62438E150004E8792 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F52438E150004E8792 /* API.swift */; };
 		987854F92438E2F4004E8792 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F82438E2F4004E8792 /* Story.swift */; };
 		987854FE2438E599004E8792 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854FD2438E599004E8792 /* StoriesView.swift */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9861DD20243CC5610069DDBA /* TimelaneCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,9 @@
 			dependencies = (
 			);
 			name = YAHN;
+			packageProductDependencies = (
+				9861DD1F243CC5610069DDBA /* TimelaneCombine */,
+			);
 			productName = YAHN;
 			productReference = 9800C2E8243448F2001CE1B7 /* YAHN.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 9800C2DF243448F2001CE1B7;
+			packageReferences = (
+				9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */,
+			);
 			productRefGroup = 9800C2E9243448F2001CE1B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -547,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/icanzilb/TimelaneCombine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9861DD1F243CC5610069DDBA /* TimelaneCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */;
+			productName = TimelaneCombine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9800C2E0243448F2001CE1B7 /* Project object */;
 }
