@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class CommentsViewModel {
+class CommentsViewModel: ObservableObject {
 
     var title: String {
         story.title
@@ -11,9 +11,11 @@ class CommentsViewModel {
         story.by
     }
 
-    var comments: String {
+    var commentsCount: String {
         "\(story.descendants) comments"
     }
+
+    @Published var comments: [Comment]
 
     var child: [Int] {
         story.kids
@@ -25,6 +27,7 @@ class CommentsViewModel {
 
     init(story: Story) {
         self.story = story
+        self.comments = [Comment]()
     }
 
     func fetchComments() {
@@ -34,7 +37,7 @@ class CommentsViewModel {
             .sink(receiveCompletion: { completion in
 
             }, receiveValue: { comments in
-                print(comments)
+                self.comments.append(comments)
             })
             .store(in: &subscriptions)
 

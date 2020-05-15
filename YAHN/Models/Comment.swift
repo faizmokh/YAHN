@@ -1,12 +1,12 @@
 import Foundation
 
 // MARK: - Comment
-struct Comment: Codable {
-    let by: String
+struct Comment: Codable, Identifiable {
     let id: Int
+    let by: String
     let kids: [Int]
     let parent: Int
     let text: String
-    let time: Int
+    let time: TimeInterval
     let type: String
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CommentsView: View {
 
-    let viewModel: CommentsViewModel
+    @ObservedObject var viewModel: CommentsViewModel
 
     init(viewModel: CommentsViewModel) {
         self.viewModel = viewModel
@@ -10,14 +10,14 @@ struct CommentsView: View {
 
     var body: some View {
         List {
-            Section(header: HeaderView(title: viewModel.title, author: viewModel.author, comments: viewModel.comments)) {
-                ForEach(viewModel.child, id: \.self) { c in
-                    Text("id \(c)")
+            Section(header: HeaderView(title: viewModel.title, author: viewModel.author, comments: viewModel.commentsCount)) {
+                ForEach(self.viewModel.comments) {
+                    CommentView(comment: $0)
                 }
             }
         }
         .listStyle(GroupedListStyle())
-        .navigationBarTitle(Text(viewModel.comments), displayMode: .inline)
+        .navigationBarTitle(Text(viewModel.commentsCount), displayMode: .inline)
         .onAppear(perform: viewModel.fetchComments)
     }
 }
