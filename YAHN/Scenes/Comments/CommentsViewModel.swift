@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 class CommentsViewModel {
 
@@ -19,8 +20,23 @@ class CommentsViewModel {
     }
 
     private let story: Story
+    private let api = API()
+    private var subscriptions = Set<AnyCancellable>()
 
     init(story: Story) {
         self.story = story
+    }
+
+    func fetchComments() {
+        api.comments(parentID: story.kids)
+            .print()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+
+            }, receiveValue: { comments in
+                print(comments)
+            })
+            .store(in: &subscriptions)
+
     }
 }

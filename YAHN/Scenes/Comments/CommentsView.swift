@@ -18,6 +18,7 @@ struct CommentsView: View {
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(Text(viewModel.comments), displayMode: .inline)
+        .onAppear(perform: viewModel.fetchComments)
     }
 }
 
