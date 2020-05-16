@@ -20,7 +20,7 @@ struct CommentView: View {
             }
             .font(.footnote)
             .foregroundColor(.accentColor)
-            Text(comment.text)
+            TextLabel(text: comment.text)
                 .font(.body)
         }
     .padding()

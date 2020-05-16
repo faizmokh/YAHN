@@ -1,0 +1,16 @@
+PODS:
+  - Atributika (4.9.5)
+
+DEPENDENCIES:
+  - Atributika
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Atributika
+
+SPEC CHECKSUMS:
+  Atributika: 19429d34013b6d860feb5427c67bdbd219414e1f
+
+PODFILE CHECKSUM: b9194713d18e754ff6b79c9ec46199a2fd8e09b1
+
+COCOAPODS: 1.7.5

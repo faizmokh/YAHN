@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,16 +13,19 @@
 		9800C2F5243448F4001CE1B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F4243448F4001CE1B7 /* Preview Assets.xcassets */; };
 		9800C2F8243448F4001CE1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9800C2F6243448F4001CE1B7 /* LaunchScreen.storyboard */; };
 		9800C303243448F4001CE1B7 /* YAHNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9800C302243448F4001CE1B7 /* YAHNTests.swift */; };
-		9861DD20243CC5610069DDBA /* TimelaneCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 9861DD1F243CC5610069DDBA /* TimelaneCombine */; };
+		98387EAA246FD7AA00ACC736 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98387EA9246FD7AA00ACC736 /* TextView.swift */; };
 		987854F62438E150004E8792 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F52438E150004E8792 /* API.swift */; };
 		987854F92438E2F4004E8792 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854F82438E2F4004E8792 /* Story.swift */; };
 		987854FE2438E599004E8792 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854FD2438E599004E8792 /* StoriesView.swift */; };
 		987855002438E5AB004E8792 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987854FF2438E5AB004E8792 /* StoriesViewModel.swift */; };
 		98AC69B1243CCAAE00760C9F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC69B0243CCAAE00760C9F /* Comment.swift */; };
 		98C4D5C1246EDD19001BC753 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C4D5C0246EDD19001BC753 /* CommentView.swift */; };
+		98CFAEAE246FF2DB002FCFD5 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CFAEAD246FF2DB002FCFD5 /* TextLabel.swift */; };
 		98DFBBD6243B7D0D00C002C5 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DFBBD5243B7D0D00C002C5 /* CommentsView.swift */; };
 		98DFBBD8243B7DBB00C002C5 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DFBBD7243B7DBB00C002C5 /* CommentsViewModel.swift */; };
 		98DFBBDB243B811800C002C5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DFBBDA243B811800C002C5 /* HeaderView.swift */; };
+		9C19375AFD1BB01F8667D84E /* Pods_YAHNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D749BF245FDE9CD0F13778 /* Pods_YAHNTests.framework */; };
+		C3DFE252401C129406138439 /* Pods_YAHN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CFFDBFD9BCBF5D1291CCA5 /* Pods_YAHN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13E409A3C5AA342D111D8903 /* Pods-YAHN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAHN.debug.xcconfig"; path = "Target Support Files/Pods-YAHN/Pods-YAHN.debug.xcconfig"; sourceTree = "<group>"; };
+		6D4825B74723089DA2A646C9 /* Pods-YAHNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAHNTests.release.xcconfig"; path = "Target Support Files/Pods-YAHNTests/Pods-YAHNTests.release.xcconfig"; sourceTree = "<group>"; };
+		81D749BF245FDE9CD0F13778 /* Pods_YAHNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAHNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9800C2E8243448F2001CE1B7 /* YAHN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAHN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9800C2EB243448F2001CE1B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9800C2ED243448F2001CE1B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,15 +52,20 @@
 		9800C2FE243448F4001CE1B7 /* YAHNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YAHNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9800C302243448F4001CE1B7 /* YAHNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAHNTests.swift; sourceTree = "<group>"; };
 		9800C304243448F4001CE1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98387EA9246FD7AA00ACC736 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		987854F52438E150004E8792 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		987854F82438E2F4004E8792 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		987854FD2438E599004E8792 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		987854FF2438E5AB004E8792 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		98AC69B0243CCAAE00760C9F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		98C4D5C0246EDD19001BC753 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		98CFAEAD246FF2DB002FCFD5 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		98DFBBD5243B7D0D00C002C5 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		98DFBBD7243B7DBB00C002C5 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		98DFBBDA243B811800C002C5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C671850FA856FBBB7C56A33A /* Pods-YAHN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAHN.release.xcconfig"; path = "Target Support Files/Pods-YAHN/Pods-YAHN.release.xcconfig"; sourceTree = "<group>"; };
+		F7CFFDBFD9BCBF5D1291CCA5 /* Pods_YAHN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YAHN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E3FCACCB65CB6A32B0BE2F /* Pods-YAHNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YAHNTests.debug.xcconfig"; path = "Target Support Files/Pods-YAHNTests/Pods-YAHNTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9861DD20243CC5610069DDBA /* TimelaneCombine in Frameworks */,
+				C3DFE252401C129406138439 /* Pods_YAHN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,18 +81,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C19375AFD1BB01F8667D84E /* Pods_YAHNTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D52FFC40F688302A100A9BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13E409A3C5AA342D111D8903 /* Pods-YAHN.debug.xcconfig */,
+				C671850FA856FBBB7C56A33A /* Pods-YAHN.release.xcconfig */,
+				F8E3FCACCB65CB6A32B0BE2F /* Pods-YAHNTests.debug.xcconfig */,
+				6D4825B74723089DA2A646C9 /* Pods-YAHNTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9800C2DF243448F2001CE1B7 = {
 			isa = PBXGroup;
 			children = (
 				9800C2EA243448F2001CE1B7 /* YAHN */,
 				9800C301243448F4001CE1B7 /* YAHNTests */,
 				9800C2E9243448F2001CE1B7 /* Products */,
+				8D52FFC40F688302A100A9BF /* Pods */,
+				F5CE3A637C2F15E10BFCAF25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +194,8 @@
 				98DFBBD7243B7DBB00C002C5 /* CommentsViewModel.swift */,
 				98DFBBD5243B7D0D00C002C5 /* CommentsView.swift */,
 				98C4D5C0246EDD19001BC753 /* CommentView.swift */,
+				98387EA9246FD7AA00ACC736 /* TextView.swift */,
+				98CFAEAD246FF2DB002FCFD5 /* TextLabel.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -181,6 +208,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F5CE3A637C2F15E10BFCAF25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFFDBFD9BCBF5D1291CCA5 /* Pods_YAHN.framework */,
+				81D749BF245FDE9CD0F13778 /* Pods_YAHNTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9800C307243448F4001CE1B7 /* Build configuration list for PBXNativeTarget "YAHN" */;
 			buildPhases = (
+				121BE53AB8630337EFA2E6FC /* [CP] Check Pods Manifest.lock */,
 				9800C2E4243448F2001CE1B7 /* Sources */,
 				9800C2E5243448F2001CE1B7 /* Frameworks */,
 				9800C2E6243448F2001CE1B7 /* Resources */,
+				FA2C36DF6B77337A04FF7695 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,7 +236,6 @@
 			);
 			name = YAHN;
 			packageProductDependencies = (
-				9861DD1F243CC5610069DDBA /* TimelaneCombine */,
 			);
 			productName = YAHN;
 			productReference = 9800C2E8243448F2001CE1B7 /* YAHN.app */;
@@ -208,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9800C30A243448F4001CE1B7 /* Build configuration list for PBXNativeTarget "YAHNTests" */;
 			buildPhases = (
+				BA3F88B9CFD9B59072C8B0FF /* [CP] Check Pods Manifest.lock */,
 				9800C2FA243448F4001CE1B7 /* Sources */,
 				9800C2FB243448F4001CE1B7 /* Frameworks */,
 				9800C2FC243448F4001CE1B7 /* Resources */,
@@ -251,7 +289,6 @@
 			);
 			mainGroup = 9800C2DF243448F2001CE1B7;
 			packageReferences = (
-				9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */,
 			);
 			productRefGroup = 9800C2E9243448F2001CE1B7 /* Products */;
 			projectDirPath = "";
@@ -283,6 +320,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		121BE53AB8630337EFA2E6FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YAHN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA3F88B9CFD9B59072C8B0FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YAHNTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA2C36DF6B77337A04FF7695 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAHN/Pods-YAHN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YAHN/Pods-YAHN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YAHN/Pods-YAHN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9800C2E4243448F2001CE1B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,10 +394,12 @@
 				9800C2EE243448F2001CE1B7 /* SceneDelegate.swift in Sources */,
 				987854FE2438E599004E8792 /* StoriesView.swift in Sources */,
 				987855002438E5AB004E8792 /* StoriesViewModel.swift in Sources */,
+				98CFAEAE246FF2DB002FCFD5 /* TextLabel.swift in Sources */,
 				98AC69B1243CCAAE00760C9F /* Comment.swift in Sources */,
 				98DFBBD8243B7DBB00C002C5 /* CommentsViewModel.swift in Sources */,
 				987854F62438E150004E8792 /* API.swift in Sources */,
 				987854F92438E2F4004E8792 /* Story.swift in Sources */,
+				98387EAA246FD7AA00ACC736 /* TextView.swift in Sources */,
 				98C4D5C1246EDD19001BC753 /* CommentView.swift in Sources */,
 				98DFBBD6243B7D0D00C002C5 /* CommentsView.swift in Sources */,
 			);
@@ -448,6 +551,7 @@
 		};
 		9800C308243448F4001CE1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13E409A3C5AA342D111D8903 /* Pods-YAHN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +573,7 @@
 		};
 		9800C309243448F4001CE1B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C671850FA856FBBB7C56A33A /* Pods-YAHN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +595,7 @@
 		};
 		9800C30B243448F4001CE1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E3FCACCB65CB6A32B0BE2F /* Pods-YAHNTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +618,7 @@
 		};
 		9800C30C243448F4001CE1B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D4825B74723089DA2A646C9 /* Pods-YAHNTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,25 +670,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/icanzilb/TimelaneCombine";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9861DD1F243CC5610069DDBA /* TimelaneCombine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9861DD1E243CC5610069DDBA /* XCRemoteSwiftPackageReference "TimelaneCombine" */;
-			productName = TimelaneCombine;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9800C2E0243448F2001CE1B7 /* Project object */;
 }
