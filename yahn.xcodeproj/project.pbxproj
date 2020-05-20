@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,12 +12,14 @@
 		7494AF7E9BB63829F752DBF4 /* Pods_yahnUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6844F5BD27F70C0E2C5801AA /* Pods_yahnUITests.framework */; };
 		980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AC024757E5100148FBD /* AppDelegate.swift */; };
 		980A4AC324757E5100148FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AC224757E5100148FBD /* SceneDelegate.swift */; };
-		980A4AC524757E5100148FBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AC424757E5100148FBD /* ContentView.swift */; };
 		980A4AC724757E5200148FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980A4AC624757E5200148FBD /* Assets.xcassets */; };
 		980A4ACA24757E5200148FBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980A4AC924757E5200148FBD /* Preview Assets.xcassets */; };
 		980A4ACD24757E5200148FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980A4ACB24757E5200148FBD /* LaunchScreen.storyboard */; };
 		980A4AD824757E5300148FBD /* yahnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AD724757E5300148FBD /* yahnTests.swift */; };
 		980A4AE324757E5300148FBD /* yahnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AE224757E5300148FBD /* yahnUITests.swift */; };
+		980A4AF224758EB400148FBD /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF124758EB400148FBD /* StoriesView.swift */; };
+		980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF324758ECC00148FBD /* StoriesViewModel.swift */; };
+		980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF6247590EC00148FBD /* HNWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,6 @@
 		980A4ABD24757E5100148FBD /* yahn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yahn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		980A4AC024757E5100148FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		980A4AC224757E5100148FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		980A4AC424757E5100148FBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		980A4AC624757E5200148FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		980A4AC924757E5200148FBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		980A4ACC24757E5200148FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,9 @@
 		980A4ADE24757E5300148FBD /* yahnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yahnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		980A4AE224757E5300148FBD /* yahnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yahnUITests.swift; sourceTree = "<group>"; };
 		980A4AE424757E5300148FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		980A4AF124758EB400148FBD /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		980A4AF324758ECC00148FBD /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
+		980A4AF6247590EC00148FBD /* HNWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWorker.swift; sourceTree = "<group>"; };
 		9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahnUITests.debug.xcconfig"; path = "Target Support Files/Pods-yahnUITests/Pods-yahnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.release.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.release.xcconfig"; sourceTree = "<group>"; };
 		C48FE56132D18AF60870F6F3 /* Pods-yahn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.debug.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +130,10 @@
 		980A4ABF24757E5100148FBD /* yahn */ = {
 			isa = PBXGroup;
 			children = (
+				980A4AF5247590DC00148FBD /* Workers */,
+				980A4AF024758E8A00148FBD /* Stories */,
 				980A4AC024757E5100148FBD /* AppDelegate.swift */,
 				980A4AC224757E5100148FBD /* SceneDelegate.swift */,
-				980A4AC424757E5100148FBD /* ContentView.swift */,
 				980A4AC624757E5200148FBD /* Assets.xcassets */,
 				980A4ACB24757E5200148FBD /* LaunchScreen.storyboard */,
 				980A4ACE24757E5200148FBD /* Info.plist */,
@@ -163,6 +168,23 @@
 			path = yahnUITests;
 			sourceTree = "<group>";
 		};
+		980A4AF024758E8A00148FBD /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				980A4AF124758EB400148FBD /* StoriesView.swift */,
+				980A4AF324758ECC00148FBD /* StoriesViewModel.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		980A4AF5247590DC00148FBD /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				980A4AF6247590EC00148FBD /* HNWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		E788EAB5537C477A127BAD91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +195,6 @@
 				9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */,
 				CB6B3F5545A1642A1463D514 /* Pods-yahnUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -398,9 +419,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */,
+				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
 				980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */,
 				980A4AC324757E5100148FBD /* SceneDelegate.swift in Sources */,
-				980A4AC524757E5100148FBD /* ContentView.swift in Sources */,
+				980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
