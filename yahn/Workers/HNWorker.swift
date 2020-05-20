@@ -12,6 +12,11 @@ import HNScraper
 struct Story: Identifiable {
     let id: String
     let title: String
+    let url: URL?
+    let domain: String
+    let points: Int
+    let username: String
+    let commentCount: Int
 }
 
 class HNWorker {
@@ -23,7 +28,14 @@ class HNWorker {
             }
 
             for post in posts {
-                let story = Story(id: post.id, title: post.title)
+                let story = Story(
+                    id: post.id,
+                    title: post.title,
+                    url: post.url,
+                    domain: post.urlDomain,
+                    points: post.points,
+                    username: post.username,
+                    commentCount: post.commentCount)
                 stories.append(story)
                 completion(.success(stories))
             }

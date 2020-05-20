@@ -19,7 +19,7 @@ struct StoriesView: View {
     var body: some View {
         List {
             ForEach(viewModel.stories) { story in
-                Text(story.title)
+                StoryView(story: story)
             }
         }
         .onAppear(perform: viewModel.fetchStories)

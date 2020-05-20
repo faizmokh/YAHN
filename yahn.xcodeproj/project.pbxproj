@@ -20,6 +20,7 @@
 		980A4AF224758EB400148FBD /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF124758EB400148FBD /* StoriesView.swift */; };
 		980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF324758ECC00148FBD /* StoriesViewModel.swift */; };
 		980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF6247590EC00148FBD /* HNWorker.swift */; };
+		980A4AFB2475980800148FBD /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AFA2475980800148FBD /* StoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		980A4AF124758EB400148FBD /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		980A4AF324758ECC00148FBD /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		980A4AF6247590EC00148FBD /* HNWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWorker.swift; sourceTree = "<group>"; };
+		980A4AFA2475980800148FBD /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahnUITests.debug.xcconfig"; path = "Target Support Files/Pods-yahnUITests/Pods-yahnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.release.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.release.xcconfig"; sourceTree = "<group>"; };
 		C48FE56132D18AF60870F6F3 /* Pods-yahn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.debug.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,8 +132,9 @@
 		980A4ABF24757E5100148FBD /* yahn */ = {
 			isa = PBXGroup;
 			children = (
+				980A4AF9247597F300148FBD /* Scenes */,
+				980A4AF8247597EA00148FBD /* Views */,
 				980A4AF5247590DC00148FBD /* Workers */,
-				980A4AF024758E8A00148FBD /* Stories */,
 				980A4AC024757E5100148FBD /* AppDelegate.swift */,
 				980A4AC224757E5100148FBD /* SceneDelegate.swift */,
 				980A4AC624757E5200148FBD /* Assets.xcassets */,
@@ -183,6 +186,22 @@
 				980A4AF6247590EC00148FBD /* HNWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		980A4AF8247597EA00148FBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				980A4AFA2475980800148FBD /* StoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		980A4AF9247597F300148FBD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				980A4AF024758E8A00148FBD /* Stories */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		E788EAB5537C477A127BAD91 /* Pods */ = {
@@ -419,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980A4AFB2475980800148FBD /* StoryView.swift in Sources */,
 				980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */,
 				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
 				980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */,
