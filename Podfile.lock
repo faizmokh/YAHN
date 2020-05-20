@@ -1,0 +1,22 @@
+PODS:
+  - HNScraper (0.2.2)
+
+DEPENDENCIES:
+  - HNScraper (from `https://github.com/faizmokhtar/HNScraper.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  HNScraper:
+    :branch: master
+    :git: https://github.com/faizmokhtar/HNScraper.git
+
+CHECKOUT OPTIONS:
+  HNScraper:
+    :commit: f741e827ce8271385a6d93734ba5911e818c1043
+    :git: https://github.com/faizmokhtar/HNScraper.git
+
+SPEC CHECKSUMS:
+  HNScraper: 89d135811bc8b9088adbb677c0bbc6cf8ed85cc0
+
+PODFILE CHECKSUM: eef938e950c10c1d110ad8dbb10829020b334371
+
+COCOAPODS: 1.7.5
