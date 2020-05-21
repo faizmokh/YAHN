@@ -9,17 +9,6 @@
 import Foundation
 import HNScraper
 
-struct Story: Identifiable {
-    let id: String
-    let title: String
-    let url: URL?
-    let domain: String
-    let points: Int
-    let username: String
-    let relativeTime: String
-    let commentCount: Int
-}
-
 class HNWorker {
 
     func fetchStories(completion: @escaping (Result<([Story], String?), Error>) -> Void) {
