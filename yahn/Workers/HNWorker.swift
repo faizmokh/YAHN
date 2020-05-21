@@ -13,7 +13,7 @@ class HNWorker {
 
     func fetchStories(completion: @escaping (Result<([Story], String?), Error>) -> Void) {
         var stories: [Story] = [Story]()
-        HNScraper.shared.getPostsList(page: .best) { (posts, linkForMore, error) in
+        HNScraper.shared.getPostsList(page: .news) { (posts, linkForMore, error) in
             if error != nil {
                 return
             }
