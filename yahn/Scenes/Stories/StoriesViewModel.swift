@@ -35,12 +35,12 @@ class StoriesViewModel: ObservableObject {
 
     func loadMore() {
         guard let nextLink = self.nextLink else { return }
-        worker.fetchMoreStories(linkForMore: nextLink) { result in
+        worker.fetchMoreStories(link: nextLink) { result in
             switch result {
-            case .success(let stories, let nextLink):
-                print(stories)
+            case .success(let stories, let linkForMore):
+                print(linkForMore)
                 self.stories.append(contentsOf: stories)
-                self.nextLink = nextLink
+                self.nextLink = linkForMore
             case .failure(let error):
                 print(error)
             }

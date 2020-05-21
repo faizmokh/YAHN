@@ -43,9 +43,9 @@ class HNWorker {
         }
     }
 
-    func fetchMoreStories(linkForMore: String, completion: @escaping (Result<([Story], String?), Error>) -> Void) {
+    func fetchMoreStories(link: String, completion: @escaping (Result<([Story], String?), Error>) -> Void) {
         var stories: [Story] = [Story]()
-        HNScraper.shared.getMoreItems(linkForMore: linkForMore) { (posts, linkforMore, error) in
+        HNScraper.shared.getMoreItems(linkForMore: link) { (posts, receivedLink, error) in
             if error != nil {
                 return
             }
@@ -60,8 +60,9 @@ class HNWorker {
                     username: post.username,
                     commentCount: post.commentCount)
                 stories.append(story)
-                completion(.success((stories, linkForMore)))
             }
+
+            completion(.success((stories, receivedLink)))
         }
     }
 }
