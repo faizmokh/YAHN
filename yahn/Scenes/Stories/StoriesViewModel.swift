@@ -7,13 +7,14 @@
 //
 
 import Foundation
-import HNScraper
+import SwiftUI
 
 class StoriesViewModel: ObservableObject {
 
     let worker: HNWorker
 
     @Published var stories: [Story] = [Story]()
+    private var nextLink: String?
 
     init(worker: HNWorker = HNWorker()) {
         self.worker = worker
@@ -22,9 +23,24 @@ class StoriesViewModel: ObservableObject {
     func fetchStories() {
         worker.fetchStories { result in
             switch result {
-            case .success(let stories):
+            case .success(let stories, let nextLink):
                 print(stories)
                 self.stories = stories
+                self.nextLink = nextLink
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    func loadMore() {
+        guard let nextLink = self.nextLink else { return }
+        worker.fetchMoreStories(linkForMore: nextLink) { result in
+            switch result {
+            case .success(let stories, let nextLink):
+                print(stories)
+                self.stories.append(contentsOf: stories)
+                self.nextLink = nextLink
             case .failure(let error):
                 print(error)
             }

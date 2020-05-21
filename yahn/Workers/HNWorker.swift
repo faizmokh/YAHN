@@ -20,9 +20,10 @@ struct Story: Identifiable {
 }
 
 class HNWorker {
-    func fetchStories(completion: @escaping (Result<[Story], Error>) -> Void) {
+
+    func fetchStories(completion: @escaping (Result<([Story], String?), Error>) -> Void) {
         var stories: [Story] = [Story]()
-        HNScraper.shared.getPostsList(page: .front) { (posts, linkForMore, error) in
+        HNScraper.shared.getPostsList(page: .best) { (posts, linkForMore, error) in
             if error != nil {
                 return
             }
@@ -37,7 +38,29 @@ class HNWorker {
                     username: post.username,
                     commentCount: post.commentCount)
                 stories.append(story)
-                completion(.success(stories))
+                completion(.success((stories, linkForMore)))
+            }
+        }
+    }
+
+    func fetchMoreStories(linkForMore: String, completion: @escaping (Result<([Story], String?), Error>) -> Void) {
+        var stories: [Story] = [Story]()
+        HNScraper.shared.getMoreItems(linkForMore: linkForMore) { (posts, linkforMore, error) in
+            if error != nil {
+                return
+            }
+
+            for post in posts {
+                let story = Story(
+                    id: post.id,
+                    title: post.title,
+                    url: post.url,
+                    domain: post.urlDomain,
+                    points: post.points,
+                    username: post.username,
+                    commentCount: post.commentCount)
+                stories.append(story)
+                completion(.success((stories, linkForMore)))
             }
         }
     }
