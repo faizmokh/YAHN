@@ -17,26 +17,28 @@ struct StoriesView: View {
     }
 
     var body: some View {
-        List {
-            ForEach(viewModel.stories) { story in
-                StoryView(story: story)
-            }
-            Button(action: viewModel.loadMore) {
-                GeometryReader { reader in
-                    HStack(alignment: .center) {
-                        Text("Load more")
-                            .font(.callout)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: reader.size.width, height: 50, alignment: .center)
-                    .background(Color.secondary)
-                    .cornerRadius(8)
+        NavigationView {
+            List {
+                ForEach(viewModel.stories) { story in
+                    StoryView(story: story)
                 }
+                Button(action: viewModel.loadMore) {
+                    GeometryReader { reader in
+                        HStack(alignment: .center) {
+                            Text("Load more")
+                                .font(.callout)
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                        }
+                        .frame(width: reader.size.width, height: 50, alignment: .center)
+                        .background(Color.secondary)
+                        .cornerRadius(8)
+                    }
 
+                }
             }
+            .onAppear(perform: viewModel.fetchStories)
         }
-        .onAppear(perform: viewModel.fetchStories)
     }
 }
 
