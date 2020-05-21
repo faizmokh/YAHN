@@ -24,8 +24,8 @@ struct StoryView: View {
                 .font(.subheadline)
                 .fontWeight(.medium)
                 .foregroundColor(.gray)
-            Text("\(story.points) points by \(story.username) | \(story.commentCount) comments")
-                .font(.footnote)
+            Text("\(story.points) points by \(story.username) \(story.relativeTime) | \(story.commentCount) comments")
+                .font(.caption)
                 .fontWeight(.regular)
         }
         .padding(.vertical, 10)
@@ -34,7 +34,7 @@ struct StoryView: View {
 }
 
 struct StoryView_Previews: PreviewProvider {
-    static let story = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", commentCount: 69)
+    static let story = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69)
     static var previews: some View {
         StoryView(story: story)
             .previewLayout(.sizeThatFits)

@@ -24,7 +24,6 @@ class StoriesViewModel: ObservableObject {
         worker.fetchStories { result in
             switch result {
             case .success(let stories, let nextLink):
-                print(stories)
                 self.stories = stories
                 self.nextLink = nextLink
             case .failure(let error):
@@ -38,7 +37,6 @@ class StoriesViewModel: ObservableObject {
         worker.fetchMoreStories(link: nextLink) { result in
             switch result {
             case .success(let stories, let linkForMore):
-                print(linkForMore)
                 self.stories.append(contentsOf: stories)
                 self.nextLink = linkForMore
             case .failure(let error):

@@ -16,6 +16,7 @@ struct Story: Identifiable {
     let domain: String
     let points: Int
     let username: String
+    let relativeTime: String
     let commentCount: Int
 }
 
@@ -29,6 +30,7 @@ class HNWorker {
             }
 
             for post in posts {
+                print(post.time)
                 let story = Story(
                     id: post.id,
                     title: post.title,
@@ -36,6 +38,7 @@ class HNWorker {
                     domain: post.urlDomain,
                     points: post.points,
                     username: post.username,
+                    relativeTime: post.time,
                     commentCount: post.commentCount)
                 stories.append(story)
                 completion(.success((stories, linkForMore)))
@@ -58,6 +61,7 @@ class HNWorker {
                     domain: post.urlDomain,
                     points: post.points,
                     username: post.username,
+                    relativeTime: post.time,
                     commentCount: post.commentCount)
                 stories.append(story)
             }
