@@ -47,6 +47,7 @@ struct StoriesView: View {
             .onAppear(perform: {
                 self.viewModel.fetchStories()
             })
+            .navigationBarTitle("Front page")
         }
     }
 }
