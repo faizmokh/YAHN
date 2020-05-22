@@ -23,7 +23,6 @@
 		980A4AFB2475980800148FBD /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AFA2475980800148FBD /* StoryView.swift */; };
 		9845446524778C6F00B4AD83 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9845446424778C6F00B4AD83 /* Color+Extensions.swift */; };
 		984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */; };
-		9845446A247798A000B4AD83 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98454469247798A000B4AD83 /* FooterView.swift */; };
 		988A63552476C9B900FFDC6B /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A63542476C9B900FFDC6B /* Story.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +67,6 @@
 		980A4AFA2475980800148FBD /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		9845446424778C6F00B4AD83 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
-		98454469247798A000B4AD83 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		988A63542476C9B900FFDC6B /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahnUITests.debug.xcconfig"; path = "Target Support Files/Pods-yahnUITests/Pods-yahnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.release.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				980A4AFA2475980800148FBD /* StoryView.swift */,
-				98454469247798A000B4AD83 /* FooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,7 +474,6 @@
 				988A63552476C9B900FFDC6B /* Story.swift in Sources */,
 				984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */,
 				980A4AFB2475980800148FBD /* StoryView.swift in Sources */,
-				9845446A247798A000B4AD83 /* FooterView.swift in Sources */,
 				980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */,
 				9845446524778C6F00B4AD83 /* Color+Extensions.swift in Sources */,
 				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
