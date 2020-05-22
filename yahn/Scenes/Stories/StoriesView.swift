@@ -11,6 +11,7 @@ import SwiftUI
 struct StoriesView: View {
 
     @ObservedObject var viewModel: StoriesViewModel
+    @State var isShowingDetail: Bool = false
 
     init(viewModel: StoriesViewModel = StoriesViewModel()) {
         self.viewModel = viewModel
@@ -21,7 +22,14 @@ struct StoriesView: View {
         NavigationView {
             List {
                 ForEach(viewModel.stories) { story in
-                    StoryView(story: story)
+                    Button(action: {
+                        self.isShowingDetail.toggle()
+                    }, label: {
+                        StoryView(story: story)
+                    })
+                        .sheet(isPresented: self.$isShowingDetail, content: {
+                        SafariView(url: story.url!)
+                    })
                 }
                 Button(action: viewModel.loadMore) {
                     GeometryReader { reader in
