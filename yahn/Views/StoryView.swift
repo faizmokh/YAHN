@@ -20,16 +20,20 @@ struct StoryView: View {
             Text(story.title)
                 .font(.headline)
                 .fontWeight(.bold)
+                .padding(.horizontal, 15)
+                .padding(.top, 10)
             Text(story.domain)
                 .font(.subheadline)
                 .fontWeight(.medium)
                 .foregroundColor(.gray)
+                .padding(.horizontal, 15)
             Text("\(story.points) points by \(story.username) \(story.relativeTime) | \(story.commentCount) comments")
                 .font(.caption)
                 .fontWeight(.regular)
+                .padding(.horizontal, 15)
+                .padding(.bottom, 10)
+            Divider()
         }
-        .padding(.vertical, 10)
-        .padding(.horizontal, 15)
     }
 }
 

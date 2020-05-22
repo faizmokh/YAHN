@@ -14,6 +14,7 @@ struct StoriesView: View {
 
     init(viewModel: StoriesViewModel = StoriesViewModel()) {
         self.viewModel = viewModel
+        UITableView.appearance().separatorColor = .clear
     }
 
     var body: some View {
