@@ -28,16 +28,16 @@ struct StoriesView: View {
                             Text("Load more")
                                 .font(.callout)
                                 .fontWeight(.heavy)
-                                .foregroundColor(.white)
                         }
                         .frame(width: reader.size.width, height: 50, alignment: .center)
-                        .background(Color.secondary)
-                        .cornerRadius(8)
                     }
-
                 }
+                .padding()
+                .buttonStyle(SecondaryButtonStyle())
             }
-            .onAppear(perform: viewModel.fetchStories)
+            .onAppear(perform: {
+                self.viewModel.fetchStories()
+            })
         }
     }
 }
