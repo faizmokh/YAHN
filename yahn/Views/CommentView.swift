@@ -49,13 +49,13 @@ struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CommentView(comment: Comment(id: "123", text: "hello world", level: 0, username: "faizmokhtar", relativeTime: "3h ago"))
-                .previewLayout(.fixed(width: 300, height: 100))
+                .previewLayout(.fixed(width: 200, height: 100))
             CommentView(comment:  Comment(id: "123", text: "hello world", level: 1, username: "faizmokhtar", relativeTime: "3h ago"))
-                .previewLayout(.fixed(width: 300, height: 100))
+                .previewLayout(.fixed(width: 200, height: 100))
             CommentView(comment:  Comment(id: "123", text: "hello world", level: 2, username: "faizmokhtar", relativeTime: "3h ago"))
-                .previewLayout(.fixed(width: 300, height: 100))
+                .previewLayout(.fixed(width: 200, height: 100))
             CommentView(comment:  Comment(id: "123", text: "hello world", level: 3, username: "faizmokhtar", relativeTime: "3h ago"))
-                .previewLayout(.fixed(width: 300, height: 100))
+                .previewLayout(.fixed(width: 200, height: 100))
         }
     }
 }
