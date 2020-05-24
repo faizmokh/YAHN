@@ -1,8 +1,14 @@
 PODS:
   - HNScraper (0.2.2)
+  - SwiftSoup (2.3.1)
 
 DEPENDENCIES:
   - HNScraper (from `https://github.com/faizmokhtar/HNScraper.git`, branch `master`)
+  - SwiftSoup
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftSoup
 
 EXTERNAL SOURCES:
   HNScraper:
@@ -16,7 +22,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   HNScraper: 89d135811bc8b9088adbb677c0bbc6cf8ed85cc0
+  SwiftSoup: e5af192bc99be8398d5f93e15ff6a3c80ba81de1
 
-PODFILE CHECKSUM: eef938e950c10c1d110ad8dbb10829020b334371
+PODFILE CHECKSUM: 01cc66f5a9875f9a06002ae7ac7c3899f20b6e90
 
 COCOAPODS: 1.7.5

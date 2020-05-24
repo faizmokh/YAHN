@@ -25,6 +25,11 @@
 		984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */; };
 		9845446C24779C8400B4AD83 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9845446B24779C8400B4AD83 /* SafariView.swift */; };
 		988A63552476C9B900FFDC6B /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A63542476C9B900FFDC6B /* Story.swift */; };
+		98905BA224798CC8003BB6C6 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA124798CC8003BB6C6 /* CommentsView.swift */; };
+		98905BA424798D6E003BB6C6 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */; };
+		98905BA624798EBD003BB6C6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA524798EBD003BB6C6 /* Comment.swift */; };
+		98905BA824799443003BB6C6 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA724799443003BB6C6 /* CommentView.swift */; };
+		98905BAA2479FD92003BB6C6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA92479FD92003BB6C6 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
 		9845446B24779C8400B4AD83 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		988A63542476C9B900FFDC6B /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		98905BA124798CC8003BB6C6 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		98905BA524798EBD003BB6C6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		98905BA724799443003BB6C6 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		98905BA92479FD92003BB6C6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahnUITests.debug.xcconfig"; path = "Target Support Files/Pods-yahnUITests/Pods-yahnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.release.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.release.xcconfig"; sourceTree = "<group>"; };
 		C48FE56132D18AF60870F6F3 /* Pods-yahn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.debug.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +214,8 @@
 			children = (
 				980A4AFA2475980800148FBD /* StoryView.swift */,
 				9845446B24779C8400B4AD83 /* SafariView.swift */,
+				98905BA724799443003BB6C6 /* CommentView.swift */,
+				98905BA92479FD92003BB6C6 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				980A4AF024758E8A00148FBD /* Stories */,
+				98905BA024798CB8003BB6C6 /* Comments */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -236,8 +249,18 @@
 			isa = PBXGroup;
 			children = (
 				988A63542476C9B900FFDC6B /* Story.swift */,
+				98905BA524798EBD003BB6C6 /* Comment.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		98905BA024798CB8003BB6C6 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				98905BA124798CC8003BB6C6 /* CommentsView.swift */,
+				98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 		E788EAB5537C477A127BAD91 /* Pods */ = {
@@ -474,15 +497,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98905BA424798D6E003BB6C6 /* CommentsViewModel.swift in Sources */,
 				988A63552476C9B900FFDC6B /* Story.swift in Sources */,
 				984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */,
 				9845446C24779C8400B4AD83 /* SafariView.swift in Sources */,
 				980A4AFB2475980800148FBD /* StoryView.swift in Sources */,
 				980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */,
 				9845446524778C6F00B4AD83 /* Color+Extensions.swift in Sources */,
+				98905BA224798CC8003BB6C6 /* CommentsView.swift in Sources */,
+				98905BA624798EBD003BB6C6 /* Comment.swift in Sources */,
 				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
+				98905BAA2479FD92003BB6C6 /* HeaderView.swift in Sources */,
 				980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */,
 				980A4AC324757E5100148FBD /* SceneDelegate.swift in Sources */,
+				98905BA824799443003BB6C6 /* CommentView.swift in Sources */,
 				980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,7 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahackernews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,7 +707,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahackernews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,7 +11,6 @@ import SwiftUI
 struct StoriesView: View {
 
     @ObservedObject var viewModel: StoriesViewModel
-    @State var isShowingDetail: Bool = false
 
     init(viewModel: StoriesViewModel = StoriesViewModel()) {
         self.viewModel = viewModel
@@ -22,14 +21,10 @@ struct StoriesView: View {
         NavigationView {
             List {
                 ForEach(viewModel.stories) { story in
-                    Button(action: {
-                        self.isShowingDetail.toggle()
-                    }, label: {
+                    NavigationLink(destination:
+                    CommentsView(viewModel: CommentsViewModel(story: story))) {
                         StoryView(story: story)
-                    })
-                        .sheet(isPresented: self.$isShowingDetail, content: {
-                        SafariView(url: story.url!)
-                    })
+                    }
                 }
                 Button(action: viewModel.loadMore) {
                     GeometryReader { reader in
@@ -40,6 +35,7 @@ struct StoriesView: View {
                         }
                         .frame(width: reader.size.width, height: 50, alignment: .center)
                     }
+                    .padding(.vertical, 25)
                 }
                 .padding()
                 .buttonStyle(SecondaryButtonStyle())

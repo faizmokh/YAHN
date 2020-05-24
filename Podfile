@@ -7,6 +7,7 @@ target 'yahn' do
 
   # Pods for yahn
   pod 'HNScraper', :git => 'https://github.com/faizmokhtar/HNScraper.git', :branch => 'master'
+  pod 'SwiftSoup'
 
   target 'yahnTests' do
     inherit! :search_paths

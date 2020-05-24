@@ -58,4 +58,26 @@ class HNWorker {
             completion(.success((stories, receivedLink)))
         }
     }
+
+    func fetchComments(story: Story, completion: @escaping (Result<[Comment], Error>) -> Void) {
+        HNScraper.shared.getComments(ByPostId: story.id, buildHierarchy: false) { (post, receivedComments, error) in
+            var comments: [Comment] = [Comment]()
+            if error != nil {
+                return
+            }
+
+            for received in receivedComments {
+                let comment = Comment(
+                    id: received.id,
+                    text: received.text,
+                    level: received.level,
+                    username: received.username,
+                    relativeTime: received.created
+                )
+                comments.append(comment)
+            }
+
+            completion(.success(comments))
+        }
+    }
 }
