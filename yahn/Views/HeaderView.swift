@@ -10,6 +10,8 @@ import SwiftUI
 
 struct HeaderView: View {
 
+    @State var isShowingWebsite: Bool = false
+
     let story: Story
 
     init(story: Story) {
@@ -29,22 +31,23 @@ struct HeaderView: View {
                 .font(.caption)
                 .fontWeight(.regular)
             Button(action: {
-                self.navigateToWeb()
+                self.isShowingWebsite.toggle()
             }, label: {
-                Text("Read article")
-                    .font(.footnote)
-                .padding(15)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .stroke(lineWidth: 2.0)
-                )
+                HStack(alignment: .center) {
+                    Image(systemName: "globe")
+                        .imageScale(.small)
+                    Text("Open Website")
+                        .font(.callout)
+                        .fontWeight(.bold)
+                }
+                .padding()
+            })
+            .buttonStyle(SecondaryButtonStyle())
+            .sheet(isPresented: self.$isShowingWebsite, content: {
+                SafariView(url: self.story.url!)
             })
         }
         .padding()
-    }
-
-    private func navigateToWeb() {
-
     }
 }
 
