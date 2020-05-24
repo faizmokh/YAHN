@@ -16,15 +16,18 @@ struct CommentView: View {
         VStack(alignment: .leading) {
             HStack {
                 if comment.level > 0 {
-                    RoundedRectangle(cornerRadius: 2)
-                        .foregroundColor(Color(hue: 1.0 / Double(comment.level), saturation: 1.0, brightness: 1.0))
-                        .frame(width: 3)
+                    Rectangle()
+                        .foregroundColor(Color(hue: 1.0 / Double(comment.level), saturation: 4.0, brightness: 1.0))
+                        .frame(width: 2)
                 }
                 Text(parseHTML(text: comment.text))
                     .font(.body)
+                .padding()
             }
-            .padding(.leading, CGFloat(comment.level * 10))
-            Divider()
+            .padding(.leading, CGFloat(comment.level * 20))
+            Rectangle()
+                .foregroundColor(Color.button.pressed)
+                .frame(width: UIScreen.main.bounds.width, height: 0.5)
         }
     }
 

@@ -21,6 +21,7 @@ struct CommentsView: View {
             HeaderView(story: viewModel.story)
             ForEach(viewModel.comments) { comment in
                 CommentView(comment: comment)
+                    .listRowInsets(EdgeInsets())
             }
         }
         .navigationBarTitle(Text("\(viewModel.story.commentCount) comments"), displayMode: .inline)
