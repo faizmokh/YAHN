@@ -13,7 +13,6 @@ struct SecondaryButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .padding(.vertical, 25)
             .background(configuration.isPressed ? Color.button.pressed : Color.button.normal)
             .cornerRadius(8.0)
     }
