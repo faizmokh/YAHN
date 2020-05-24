@@ -13,7 +13,7 @@ struct CommentView: View {
     let comment: Comment
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 if comment.level > 0 {
                     RoundedRectangle(cornerRadius: 2)
@@ -39,10 +39,13 @@ struct CommentView: View {
 }
 
 struct CommentView_Previews: PreviewProvider {
-    static let comment = Comment(id: "123", text: "hello world", level: 0)
+
+    private static func makeComment(text: String = "Hello world", level: Int = 0) -> Comment {
+        return Comment(id: "123", text: "hello world", level: 0)
+    }
 
     static var previews: some View {
-        CommentView(comment: comment)
+        CommentView(comment: makeComment())
             .previewLayout(.sizeThatFits)
     }
 }
