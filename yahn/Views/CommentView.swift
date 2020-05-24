@@ -33,5 +33,6 @@ struct CommentView_Previews: PreviewProvider {
 
     static var previews: some View {
         CommentView(comment: comment)
+            .previewLayout(.sizeThatFits)
     }
 }

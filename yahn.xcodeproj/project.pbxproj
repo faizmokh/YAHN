@@ -29,6 +29,7 @@
 		98905BA424798D6E003BB6C6 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */; };
 		98905BA624798EBD003BB6C6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA524798EBD003BB6C6 /* Comment.swift */; };
 		98905BA824799443003BB6C6 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA724799443003BB6C6 /* CommentView.swift */; };
+		98905BAA2479FD92003BB6C6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905BA92479FD92003BB6C6 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		98905BA524798EBD003BB6C6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		98905BA724799443003BB6C6 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		98905BA92479FD92003BB6C6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9CADC085D20E11FD93F98921 /* Pods-yahnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahnUITests.debug.xcconfig"; path = "Target Support Files/Pods-yahnUITests/Pods-yahnUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.release.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.release.xcconfig"; sourceTree = "<group>"; };
 		C48FE56132D18AF60870F6F3 /* Pods-yahn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yahn.debug.xcconfig"; path = "Target Support Files/Pods-yahn/Pods-yahn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				980A4AFA2475980800148FBD /* StoryView.swift */,
 				9845446B24779C8400B4AD83 /* SafariView.swift */,
 				98905BA724799443003BB6C6 /* CommentView.swift */,
+				98905BA92479FD92003BB6C6 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				98905BA224798CC8003BB6C6 /* CommentsView.swift in Sources */,
 				98905BA624798EBD003BB6C6 /* Comment.swift in Sources */,
 				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
+				98905BAA2479FD92003BB6C6 /* HeaderView.swift in Sources */,
 				980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */,
 				980A4AC324757E5100148FBD /* SceneDelegate.swift in Sources */,
 				98905BA824799443003BB6C6 /* CommentView.swift in Sources */,

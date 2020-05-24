@@ -18,10 +18,12 @@ struct CommentsView: View {
 
     var body: some View {
         List {
+            HeaderView(story: viewModel.story)
             ForEach(viewModel.comments) { comment in
                 CommentView(comment: comment)
             }
         }
+        .navigationBarTitle(Text("\(viewModel.story.commentCount) comments"), displayMode: .inline)
         .onAppear(perform: viewModel.fetchComments)
     }
 }
