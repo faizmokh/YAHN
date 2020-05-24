@@ -70,7 +70,9 @@ class HNWorker {
                 let comment = Comment(
                     id: received.id,
                     text: received.text,
-                    level: received.level
+                    level: received.level,
+                    username: received.username,
+                    relativeTime: received.created
                 )
                 comments.append(comment)
             }

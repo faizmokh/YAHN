@@ -15,19 +15,22 @@ struct CommentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                if comment.level > 0 {
+                ForEach(0..<comment.level, id: \.self) { index in
                     Rectangle()
-                        .foregroundColor(Color(hue: 1.0 / Double(comment.level), saturation: 4.0, brightness: 1.0))
-                        .frame(width: 2)
+                        .foregroundColor(Color.gray)
+                        .frame(width: 1)
+                        .padding(.leading, 10)
                 }
-                Text(parseHTML(text: comment.text))
-                    .font(.body)
-                .padding()
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("\(comment.username) \(comment.relativeTime)")
+                        .font(.callout)
+                        .fontWeight(.medium)
+                    Text(parseHTML(text: comment.text))
+                        .multilineTextAlignment(.leading)
+                        .font(.body)
+                }
+                .padding(.all, 10)
             }
-            .padding(.leading, CGFloat(comment.level * 20))
-            Rectangle()
-                .foregroundColor(Color.button.pressed)
-                .frame(width: UIScreen.main.bounds.width, height: 0.5)
         }
     }
 
@@ -43,12 +46,16 @@ struct CommentView: View {
 
 struct CommentView_Previews: PreviewProvider {
 
-    private static func makeComment(text: String = "Hello world", level: Int = 0) -> Comment {
-        return Comment(id: "123", text: "hello world", level: 0)
-    }
-
     static var previews: some View {
-        CommentView(comment: makeComment())
-            .previewLayout(.sizeThatFits)
+        Group {
+            CommentView(comment: Comment(id: "123", text: "hello world", level: 0, username: "faizmokhtar", relativeTime: "3h ago"))
+                .previewLayout(.fixed(width: 300, height: 100))
+            CommentView(comment:  Comment(id: "123", text: "hello world", level: 1, username: "faizmokhtar", relativeTime: "3h ago"))
+                .previewLayout(.fixed(width: 300, height: 100))
+            CommentView(comment:  Comment(id: "123", text: "hello world", level: 2, username: "faizmokhtar", relativeTime: "3h ago"))
+                .previewLayout(.fixed(width: 300, height: 100))
+            CommentView(comment:  Comment(id: "123", text: "hello world", level: 3, username: "faizmokhtar", relativeTime: "3h ago"))
+                .previewLayout(.fixed(width: 300, height: 100))
+        }
     }
 }

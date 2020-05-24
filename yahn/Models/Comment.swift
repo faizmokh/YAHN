@@ -12,4 +12,6 @@ struct Comment: Identifiable {
     let id: String
     let text: String
     let level: Int
+    let username: String
+    let relativeTime: String
 }
