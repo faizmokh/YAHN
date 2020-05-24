@@ -35,6 +35,7 @@ struct StoriesView: View {
                         }
                         .frame(width: reader.size.width, height: 50, alignment: .center)
                     }
+                    .padding(.vertical, 25)
                 }
                 .padding()
                 .buttonStyle(SecondaryButtonStyle())
