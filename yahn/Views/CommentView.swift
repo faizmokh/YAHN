@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftSoup
 
 struct CommentView: View {
     let comment: Comment
@@ -19,11 +20,20 @@ struct CommentView: View {
                         .foregroundColor(Color(hue: 1.0 / Double(comment.level), saturation: 1.0, brightness: 1.0))
                         .frame(width: 3)
                 }
-                Text(comment.text)
+                Text(parseHTML(text: comment.text))
                     .font(.body)
             }
             .padding(.leading, CGFloat(comment.level * 10))
             Divider()
+        }
+    }
+
+    private func parseHTML(text: String) -> String {
+        do {
+            let doc = try SwiftSoup.parse(text)
+            return try doc.text()
+        } catch {
+            return text
         }
     }
 }
