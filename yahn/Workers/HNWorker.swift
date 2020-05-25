@@ -19,7 +19,6 @@ class HNWorker {
             }
 
             for post in posts {
-                print(post.time)
                 let story = Story(
                     id: post.id,
                     title: post.title,
