@@ -42,4 +42,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 Feel free to contact me at Twitter [@faizmokh](https://twitter.com/faizmokh)
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
