@@ -33,7 +33,8 @@ class HNWorker {
                     points: post.points,
                     username: post.username,
                     relativeTime: post.time,
-                    commentCount: post.commentCount)
+                    commentCount: post.commentCount,
+                    type: self.getType(for: post))
                 stories.append(story)
                 completion(.success((stories, linkForMore)))
             }
@@ -56,7 +57,8 @@ class HNWorker {
                     points: post.points,
                     username: post.username,
                     relativeTime: post.time,
-                    commentCount: post.commentCount)
+                    commentCount: post.commentCount,
+                    type: self.getType(for: post))
                 stories.append(story)
             }
 
@@ -83,6 +85,17 @@ class HNWorker {
             }
 
             completion(.success(comments))
+        }
+    }
+
+    private func getType(for post: HNPost) -> StoryType {
+        switch post.type {
+        case .defaultType:
+            return .news
+        case .askHN:
+            return .asks
+        case .jobs:
+            return .jobs
         }
     }
 }

@@ -35,6 +35,10 @@ struct StoryView: View {
                 .fontWeight(.medium)
                 .foregroundColor(.gray)
                 .padding(.horizontal, 15)
+            if story.type == .asks || story.type == .jobs {
+                PillView(type: story.type)
+                    .padding(.horizontal, 15)
+            }
             Text("\(story.points) points by \(story.username) \(story.relativeTime) | \(story.commentCount) comments")
                 .font(.caption)
                 .fontWeight(.regular)
@@ -49,9 +53,18 @@ struct StoryView: View {
 }
 
 struct StoryView_Previews: PreviewProvider {
-    static let story = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69)
+    static let ask = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69, type: .asks)
+    static let story = Story(id: "123", title: "Apple Review Process", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69, type: .news)
+    static let jobs = Story(id: "123", title: "Apple Review Process", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69, type: .jobs)
+
     static var previews: some View {
-        StoryView(story: story)
-            .previewLayout(.sizeThatFits)
+        Group {
+            StoryView(story: story)
+                .previewLayout(.sizeThatFits)
+            StoryView(story: ask)
+                .previewLayout(.sizeThatFits)
+            StoryView(story: jobs)
+                .previewLayout(.sizeThatFits)
+        }
     }
 }
