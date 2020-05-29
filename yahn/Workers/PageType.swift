@@ -12,7 +12,7 @@ import HNScraper
 enum PageType: Int, CaseIterable {
     case news
     case asks
-    case jobs
+    case show
 }
 
 extension PageType {
@@ -22,8 +22,8 @@ extension PageType {
             return "front"
         case .asks:
             return "ask"
-        case .jobs:
-            return "jobs"
+        case .show:
+            return "show"
         }
     }
 
@@ -33,8 +33,8 @@ extension PageType {
             return HNScraper.PostListPageName.news
         case .asks:
             return HNScraper.PostListPageName.asks
-        case .jobs:
-            return HNScraper.PostListPageName.jobs
+        case .show:
+            return HNScraper.PostListPageName.shows
         }
     }
 }

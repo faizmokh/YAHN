@@ -20,7 +20,7 @@ class ParentStoriesViewModel {
         } else if selected == 1 {
             title = "Ask HN"
         } else {
-            title = "Jobs"
+            title = "Show HN"
         }
 
         return title
