@@ -14,6 +14,14 @@ struct HeaderView: View {
 
     let story: Story
 
+    private var a11yLabel: String {
+        return "\(story.title), website:\(story.domain)"
+    }
+
+    private var a11yValue: String {
+        return "Posted by \(story.username) \(story.relativeTime), with \(story.commentCount) comments and \(story.points) points."
+    }
+
     init(story: Story) {
         self.story = story
     }
@@ -33,8 +41,8 @@ struct HeaderView: View {
                     .fontWeight(.regular)
             }
             .accessibilityElement(children: .combine)
-            .accessibility(label: Text("\(story.title), website:\(story.domain)"))
-            .accessibility(value: Text("Posted by \(story.username) \(story.relativeTime), with \(story.commentCount) comments and \(story.points) points."))
+            .accessibility(label: Text(a11yLabel))
+            .accessibility(value: Text(a11yValue))
             .padding(.top, 10)
             Button(action: {
                 self.isShowingWebsite.toggle()
