@@ -12,6 +12,7 @@ enum StoryType: String {
     case news
     case asks = "ask hn"
     case jobs
+    case show = "show hn"
 }
 
 struct Story: Identifiable {

@@ -33,7 +33,7 @@ struct ParentStoriesView: View {
                 } else if selected == 1 {
                     StoriesView(viewModel: StoriesViewModel(worker: HNWorker(type: .asks)))
                 } else {
-                    StoriesView(viewModel: StoriesViewModel(worker: HNWorker(type: .jobs)))
+                    StoriesView(viewModel: StoriesViewModel(worker: HNWorker(type: .show)))
                 }
             }
             .navigationBarTitle(viewModel.title(selected: selected))
