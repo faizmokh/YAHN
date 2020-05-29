@@ -30,7 +30,7 @@ struct CommentsView: View {
 }
 
 struct CommentsView_Previews: PreviewProvider {
-    static let story = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69)
+    static let story = Story(id: "123", title: "Ask HN: Is SwiftUI any good?", url: nil, domain: "swift.apple.com", points: 42, username: "faizmokhtar", relativeTime: "2 hours ago", commentCount: 69, type: .news)
 
     static var previews: some View {
         CommentsView(viewModel: CommentsViewModel(story: story))

@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum StoryType: String {
+    case news
+    case asks = "ask hn"
+    case jobs
+}
+
 struct Story: Identifiable {
     let id: String
     let title: String
@@ -17,4 +23,5 @@ struct Story: Identifiable {
     let username: String
     let relativeTime: String
     let commentCount: Int
+    let type: StoryType
 }
