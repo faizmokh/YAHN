@@ -12,4 +12,17 @@ class ParentStoriesViewModel {
     var topics: [String] {
         PageType.allCases.map { $0.label }
     }
+
+    func title(selected: Int) -> String {
+        let title: String
+        if selected == 0 {
+            title = "Front Page"
+        } else if selected == 1 {
+            title = "Ask HN"
+        } else {
+            title = "Jobs"
+        }
+
+        return title
+    }
 }

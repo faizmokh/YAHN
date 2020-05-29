@@ -199,10 +199,10 @@
 		980A4AF024758E8A00148FBD /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */,
 				9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */,
 				980A4AF124758EB400148FBD /* StoriesView.swift */,
 				980A4AF324758ECC00148FBD /* StoriesViewModel.swift */,
-				9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";

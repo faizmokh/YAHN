@@ -36,7 +36,7 @@ struct ParentStoriesView: View {
                     StoriesView(viewModel: StoriesViewModel(worker: HNWorker(type: .jobs)))
                 }
             }
-            .navigationBarTitle("Front page")
+            .navigationBarTitle(viewModel.title(selected: selected))
         }
     }
 }
