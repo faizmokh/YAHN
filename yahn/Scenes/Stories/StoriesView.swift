@@ -30,15 +30,14 @@ struct StoriesView: View {
                     CommentsView(viewModel: CommentsViewModel(story: story))) {
                         StoryView(story: story)
                     }
-                } else {
+                } else if story.url != nil {
                     Button(action: {
                         self.isPresented.toggle()
                     }) {
                         Text("self")
                         StoryView(story: story)
                     }.sheet(isPresented: self.$isPresented) {
-                        guard let url = story.url else { return }
-                        SafariView(url: url)
+                        SafariView(url: story.url!)
                     }
                 }
             }
