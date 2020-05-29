@@ -22,9 +22,14 @@ struct CommentView: View {
                         .padding(.leading, 10)
                 }
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("\(comment.username) \(comment.relativeTime)")
-                        .font(.callout)
-                        .fontWeight(.medium)
+                    HStack{
+                        Text(comment.username)
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                        Text(comment.relativeTime)
+                            .font(.callout)
+                            .fontWeight(.regular)
+                    }
                     Text(parseHTML(text: comment.text))
                         .multilineTextAlignment(.leading)
                         .font(.body)
