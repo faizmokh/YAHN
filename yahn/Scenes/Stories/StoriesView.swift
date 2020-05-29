@@ -11,6 +11,9 @@ import SwiftUI
 struct StoriesView: View {
 
     @ObservedObject var viewModel: StoriesViewModel
+
+    @State var isPresented: Bool = false
+
     private var selected: Int
 
     init(viewModel: StoriesViewModel, selected: Int = 0) {
@@ -22,9 +25,20 @@ struct StoriesView: View {
     var body: some View {
         List {
             ForEach(viewModel.stories) { story in
-                NavigationLink(destination:
-                CommentsView(viewModel: CommentsViewModel(story: story))) {
-                    StoryView(story: story)
+                if story.type != .jobs {
+                    NavigationLink(destination:
+                    CommentsView(viewModel: CommentsViewModel(story: story))) {
+                        StoryView(story: story)
+                    }
+                } else if story.url != nil {
+                    Button(action: {
+                        self.isPresented.toggle()
+                    }) {
+                        Text("self")
+                        StoryView(story: story)
+                    }.sheet(isPresented: self.$isPresented) {
+                        SafariView(url: story.url!)
+                    }
                 }
             }
             Button(action: viewModel.loadMore) {
