@@ -16,7 +16,7 @@ class StoriesViewModel: ObservableObject {
     @Published var stories: [Story] = [Story]()
     private var nextLink: String?
 
-    init(worker: HNWorker = HNWorker()) {
+    init(worker: HNWorker) {
         self.worker = worker
     }
 

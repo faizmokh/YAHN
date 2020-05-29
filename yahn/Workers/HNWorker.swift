@@ -9,11 +9,47 @@
 import Foundation
 import HNScraper
 
+enum PageType: Int, CaseIterable {
+    case news
+    case asks
+    case jobs
+}
+
+extension PageType {
+    var label: String {
+        switch self {
+        case .news:
+            return "front"
+        case .asks:
+            return "ask"
+        case .jobs:
+            return "jobs"
+        }
+    }
+
+    var scraperType: HNScraper.PostListPageName {
+        switch self {
+        case .news:
+            return HNScraper.PostListPageName.news
+        case .asks:
+            return HNScraper.PostListPageName.asks
+        case .jobs:
+            return HNScraper.PostListPageName.jobs
+        }
+    }
+}
+
 class HNWorker {
+
+    let type: PageType
+
+    init(type: PageType = .news) {
+        self.type = type
+    }
 
     func fetchStories(completion: @escaping (Result<([Story], String?), Error>) -> Void) {
         var stories: [Story] = [Story]()
-        HNScraper.shared.getPostsList(page: .news) { (posts, linkForMore, error) in
+        HNScraper.shared.getPostsList(page: type.scraperType) { (posts, linkForMore, error) in
             if error != nil {
                 return
             }

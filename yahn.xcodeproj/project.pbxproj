@@ -21,6 +21,8 @@
 		980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF324758ECC00148FBD /* StoriesViewModel.swift */; };
 		980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF6247590EC00148FBD /* HNWorker.swift */; };
 		980A4AFB2475980800148FBD /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AFA2475980800148FBD /* StoryView.swift */; };
+		9837FBE02480B10400BB7F99 /* ParentStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */; };
+		9837FBE22480B55400BB7F99 /* ParentStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */; };
 		9845446524778C6F00B4AD83 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9845446424778C6F00B4AD83 /* Color+Extensions.swift */; };
 		984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */; };
 		9845446C24779C8400B4AD83 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9845446B24779C8400B4AD83 /* SafariView.swift */; };
@@ -71,6 +73,8 @@
 		980A4AF324758ECC00148FBD /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		980A4AF6247590EC00148FBD /* HNWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWorker.swift; sourceTree = "<group>"; };
 		980A4AFA2475980800148FBD /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentStoriesView.swift; sourceTree = "<group>"; };
+		9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentStoriesViewModel.swift; sourceTree = "<group>"; };
 		9845446424778C6F00B4AD83 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		984544672477950B00B4AD83 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
 		9845446B24779C8400B4AD83 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 		980A4AF024758E8A00148FBD /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */,
+				9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */,
 				980A4AF124758EB400148FBD /* StoriesView.swift */,
 				980A4AF324758ECC00148FBD /* StoriesViewModel.swift */,
 			);
@@ -497,8 +503,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9837FBE02480B10400BB7F99 /* ParentStoriesView.swift in Sources */,
 				98905BA424798D6E003BB6C6 /* CommentsViewModel.swift in Sources */,
 				988A63552476C9B900FFDC6B /* Story.swift in Sources */,
+				9837FBE22480B55400BB7F99 /* ParentStoriesViewModel.swift in Sources */,
 				984544682477950B00B4AD83 /* SecondaryButtonStyle.swift in Sources */,
 				9845446C24779C8400B4AD83 /* SafariView.swift in Sources */,
 				980A4AFB2475980800148FBD /* StoryView.swift in Sources */,
@@ -678,11 +686,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"yahn/Preview Content\"";
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = yahn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,11 +710,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"yahn/Preview Content\"";
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = yahn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
