@@ -11,7 +11,7 @@ import SwiftUI
 
 extension Color {
     enum button {
-        static let normal = Color(UIColor.systemGray)
-        static let pressed = Color(UIColor.systemGray2)
+        static let normal = Color(UIColor.systemGray4)
+        static let pressed = Color(UIColor.systemGray3)
     }
 }
