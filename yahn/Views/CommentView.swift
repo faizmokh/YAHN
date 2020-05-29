@@ -12,6 +12,14 @@ import SwiftSoup
 struct CommentView: View {
     let comment: Comment
 
+    private var a11yLabel: String {
+        return "\(comment.username) commented \(comment.relativeTime)"
+    }
+
+    private var a11yValue: String {
+        return comment.text
+    }
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -22,9 +30,14 @@ struct CommentView: View {
                         .padding(.leading, 10)
                 }
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("\(comment.username) \(comment.relativeTime)")
-                        .font(.callout)
-                        .fontWeight(.medium)
+                    HStack{
+                        Text(comment.username)
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                        Text(comment.relativeTime)
+                            .font(.callout)
+                            .fontWeight(.regular)
+                    }
                     Text(parseHTML(text: comment.text))
                         .multilineTextAlignment(.leading)
                         .font(.body)
@@ -32,6 +45,9 @@ struct CommentView: View {
                 .padding(.all, 10)
             }
         }
+        .accessibilityElement(children: .combine)
+        .accessibility(label: Text(a11yLabel))
+        .accessibility(value: Text(a11yValue))
     }
 
     private func parseHTML(text: String) -> String {

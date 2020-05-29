@@ -9,36 +9,6 @@
 import Foundation
 import HNScraper
 
-enum PageType: Int, CaseIterable {
-    case news
-    case asks
-    case jobs
-}
-
-extension PageType {
-    var label: String {
-        switch self {
-        case .news:
-            return "front"
-        case .asks:
-            return "ask"
-        case .jobs:
-            return "jobs"
-        }
-    }
-
-    var scraperType: HNScraper.PostListPageName {
-        switch self {
-        case .news:
-            return HNScraper.PostListPageName.news
-        case .asks:
-            return HNScraper.PostListPageName.asks
-        case .jobs:
-            return HNScraper.PostListPageName.jobs
-        }
-    }
-}
-
 class HNWorker {
 
     let type: PageType

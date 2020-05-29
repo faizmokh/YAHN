@@ -14,22 +14,36 @@ struct HeaderView: View {
 
     let story: Story
 
+    private var a11yLabel: String {
+        return "\(story.title), website:\(story.domain)"
+    }
+
+    private var a11yValue: String {
+        return "Posted by \(story.username) \(story.relativeTime), with \(story.commentCount) comments and \(story.points) points."
+    }
+
     init(story: Story) {
         self.story = story
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(story.title)
-                .font(.headline)
-                .fontWeight(.bold)
-            Text(story.domain)
-                .font(.subheadline)
-                .fontWeight(.medium)
-                .foregroundColor(.gray)
-            Text("\(story.points) points by \(story.username) \(story.relativeTime)")
-                .font(.caption)
-                .fontWeight(.regular)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(story.title)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(story.domain)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundColor(.gray)
+                Text("\(story.points) points by \(story.username) \(story.relativeTime)")
+                    .font(.caption)
+                    .fontWeight(.regular)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibility(label: Text(a11yLabel))
+            .accessibility(value: Text(a11yValue))
+            .padding(.top, 10)
             Button(action: {
                 self.isShowingWebsite.toggle()
             }, label: {
@@ -46,8 +60,9 @@ struct HeaderView: View {
             .sheet(isPresented: self.$isShowingWebsite, content: {
                 SafariView(url: self.story.url!)
             })
+                .padding(.vertical, 10)
+            Divider()
         }
-        .padding()
     }
 }
 
