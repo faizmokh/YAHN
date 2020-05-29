@@ -12,6 +12,8 @@ struct StoriesView: View {
 
     @ObservedObject var viewModel: StoriesViewModel
 
+    @State var selected: Int = 0
+
     init(viewModel: StoriesViewModel = StoriesViewModel()) {
         self.viewModel = viewModel
         UITableView.appearance().separatorColor = .clear
@@ -19,31 +21,41 @@ struct StoriesView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.stories) { story in
-                    NavigationLink(destination:
-                    CommentsView(viewModel: CommentsViewModel(story: story))) {
-                        StoryView(story: story)
+            VStack {
+                Picker(selection: $selected, label: EmptyView()) {
+                    ForEach(0..<viewModel.topics.count) {
+                        Text(self.viewModel.topics[$0].uppercased())
+                        .tag($0)
                     }
-                }
-                Button(action: viewModel.loadMore) {
-                    GeometryReader { reader in
-                        HStack(alignment: .center) {
-                            Text("Load more")
-                                .font(.callout)
-                                .fontWeight(.heavy)
+                }.pickerStyle(SegmentedPickerStyle())
+                    .padding()
+
+                List {
+                    ForEach(viewModel.stories) { story in
+                        NavigationLink(destination:
+                        CommentsView(viewModel: CommentsViewModel(story: story))) {
+                            StoryView(story: story)
                         }
-                        .frame(width: reader.size.width, height: 50, alignment: .center)
                     }
-                    .padding(.vertical, 25)
+                    Button(action: viewModel.loadMore) {
+                        GeometryReader { reader in
+                            HStack(alignment: .center) {
+                                Text("Load more")
+                                    .font(.callout)
+                                    .fontWeight(.heavy)
+                            }
+                            .frame(width: reader.size.width, height: 50, alignment: .center)
+                        }
+                        .padding(.vertical, 25)
+                    }
+                    .padding()
+                    .buttonStyle(SecondaryButtonStyle())
                 }
-                .padding()
-                .buttonStyle(SecondaryButtonStyle())
+                .onAppear(perform: {
+                    self.viewModel.fetchStories()
+                })
+                    .navigationBarTitle("Front page")
             }
-            .onAppear(perform: {
-                self.viewModel.fetchStories()
-            })
-            .navigationBarTitle("Front page")
         }
     }
 }

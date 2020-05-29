@@ -9,6 +9,25 @@
 import Foundation
 import HNScraper
 
+enum PageType: Int, CaseIterable {
+    case news
+    case asks
+    case jobs
+}
+
+extension PageType {
+    var label: String {
+        switch self {
+        case .news:
+            return "front"
+        case .asks:
+            return "ask"
+        case .jobs:
+            return "jobs"
+        }
+    }
+}
+
 class HNWorker {
 
     func fetchStories(completion: @escaping (Result<([Story], String?), Error>) -> Void) {
