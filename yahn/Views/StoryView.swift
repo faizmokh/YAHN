@@ -33,7 +33,10 @@ struct StoryView: View {
                 .padding(.horizontal, 15)
                 .padding(.bottom, 10)
             Divider()
-        }
+        }.accessibilityElement(children: .combine)
+            .accessibility(label: Text("\(story.title) website:\(story.domain)"))
+            .accessibility(value: Text("Posted by \(story.username) \(story.relativeTime), with \(story.commentCount) comments and \(story.points) points."))
+
     }
 }
 

@@ -21,7 +21,7 @@ struct ParentStoriesView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Picker(selection: $selected, label: EmptyView()) {
+                Picker(selection: $selected, label: Text("Pick news type")) {
                     ForEach(0..<viewModel.topics.count) {
                         Text(self.viewModel.topics[$0].uppercased())
                             .tag($0)
