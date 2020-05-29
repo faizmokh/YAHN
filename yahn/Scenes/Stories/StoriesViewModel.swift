@@ -16,11 +16,7 @@ class StoriesViewModel: ObservableObject {
     @Published var stories: [Story] = [Story]()
     private var nextLink: String?
 
-    var topics: [String] {
-        PageType.allCases.map { $0.label }
-    }
-
-    init(worker: HNWorker = HNWorker()) {
+    init(worker: HNWorker) {
         self.worker = worker
     }
 
