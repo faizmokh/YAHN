@@ -34,7 +34,6 @@ struct StoriesView: View {
                     Button(action: {
                         self.isPresented.toggle()
                     }) {
-                        Text("self")
                         StoryView(story: story)
                     }.sheet(isPresented: self.$isPresented) {
                         SafariView(url: story.url!)
