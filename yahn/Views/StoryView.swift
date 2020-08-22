@@ -44,7 +44,6 @@ struct StoryView: View {
                 .fontWeight(.regular)
                 .padding(.horizontal, 15)
                 .padding(.bottom, 10)
-            Divider()
         }.accessibilityElement(children: .combine)
             .accessibility(label: Text(a11yLabel))
             .accessibility(value: Text(a11yValue))

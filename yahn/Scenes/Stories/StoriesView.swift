@@ -19,7 +19,6 @@ struct StoriesView: View {
     init(viewModel: StoriesViewModel, selected: Int = 0) {
         self.viewModel = viewModel
         self.selected = selected
-        UITableView.appearance().separatorColor = .clear
     }
 
     var body: some View {
@@ -51,9 +50,8 @@ struct StoriesView: View {
                 }
                 .padding(.vertical, 25)
             }
-            .padding()
             .buttonStyle(SecondaryButtonStyle())
-        }
+        }.listStyle(PlainListStyle())
         .onAppear(perform: {
             self.viewModel.fetchStories()
         })
