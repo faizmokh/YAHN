@@ -205,8 +205,6 @@
 		980A4AF024758E8A00148FBD /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */,
-				9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */,
 				980A4AF124758EB400148FBD /* StoriesView.swift */,
 				980A4AF324758ECC00148FBD /* StoriesViewModel.swift */,
 			);
@@ -237,6 +235,7 @@
 		980A4AF9247597F300148FBD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				98A1D72824F1618B006DA570 /* ParentStories */,
 				980A4AF024758E8A00148FBD /* Stories */,
 				98905BA024798CB8003BB6C6 /* Comments */,
 			);
@@ -276,6 +275,15 @@
 				98905BA324798D6E003BB6C6 /* CommentsViewModel.swift */,
 			);
 			path = Comments;
+			sourceTree = "<group>";
+		};
+		98A1D72824F1618B006DA570 /* ParentStories */ = {
+			isa = PBXGroup;
+			children = (
+				9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */,
+				9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */,
+			);
+			path = ParentStories;
 			sourceTree = "<group>";
 		};
 		E788EAB5537C477A127BAD91 /* Pods */ = {
