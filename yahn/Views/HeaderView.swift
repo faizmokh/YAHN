@@ -61,7 +61,6 @@ struct HeaderView: View {
                 SafariView(url: self.story.url!)
             })
                 .padding(.vertical, 10)
-            Divider()
         }
     }
 }
