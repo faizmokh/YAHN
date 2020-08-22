@@ -18,7 +18,11 @@ struct CommentsView: View {
 
     var body: some View {
         List {
-            HeaderView(story: viewModel.story)
+            if viewModel.story.type == StoryType.asks {
+                HeaderView(story: viewModel.story, comment: viewModel.comments.first)
+            } else {
+                HeaderView(story: viewModel.story)
+            }
             ForEach(viewModel.comments) { comment in
                 CommentView(comment: comment)
                 .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))

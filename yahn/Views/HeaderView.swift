@@ -7,12 +7,14 @@
 //
 
 import SwiftUI
+import SwiftSoup
 
 struct HeaderView: View {
 
     @State var isShowingWebsite: Bool = false
 
     let story: Story
+    let comment: Comment?
 
     private var a11yLabel: String {
         return "\(story.title), website:\(story.domain)"
@@ -22,8 +24,9 @@ struct HeaderView: View {
         return "Posted by \(story.username) \(story.relativeTime), with \(story.commentCount) comments and \(story.points) points."
     }
 
-    init(story: Story) {
+    init(story: Story, comment: Comment? = nil) {
         self.story = story
+        self.comment = comment
     }
 
     var body: some View {
@@ -39,6 +42,9 @@ struct HeaderView: View {
                 Text("\(story.points) points by \(story.username) \(story.relativeTime)")
                     .font(.caption)
                     .fontWeight(.regular)
+                if comment?.text != nil {
+                    Text(parseHTML(text: comment?.text ?? ""))
+                }
             }
             .accessibilityElement(children: .combine)
             .accessibility(label: Text(a11yLabel))
@@ -61,6 +67,15 @@ struct HeaderView: View {
                 SafariView(url: self.story.url!)
             })
                 .padding(.vertical, 10)
+        }
+    }
+
+    private func parseHTML(text: String) -> String {
+        do {
+            let doc = try SwiftSoup.parse(text)
+            return try doc.text()
+        } catch {
+            return text
         }
     }
 }
