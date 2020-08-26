@@ -21,6 +21,13 @@
 		980A4AF424758ECC00148FBD /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF324758ECC00148FBD /* StoriesViewModel.swift */; };
 		980A4AF7247590EC00148FBD /* HNWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AF6247590EC00148FBD /* HNWorker.swift */; };
 		980A4AFB2475980800148FBD /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A4AFA2475980800148FBD /* StoryView.swift */; };
+		981A788624F6A66900C4D54B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981A788524F6A66900C4D54B /* WidgetKit.framework */; };
+		981A788824F6A66900C4D54B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981A788724F6A66900C4D54B /* SwiftUI.framework */; };
+		981A788B24F6A66900C4D54B /* yahnNewsWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A788A24F6A66900C4D54B /* yahnNewsWidgets.swift */; };
+		981A788E24F6A66C00C4D54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981A788D24F6A66C00C4D54B /* Assets.xcassets */; };
+		981A789024F6A66C00C4D54B /* yahnNewsWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 981A788C24F6A66900C4D54B /* yahnNewsWidgets.intentdefinition */; };
+		981A789124F6A66C00C4D54B /* yahnNewsWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 981A788C24F6A66900C4D54B /* yahnNewsWidgets.intentdefinition */; };
+		981A789424F6A66C00C4D54B /* yahnNewsWidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 981A788424F6A66900C4D54B /* yahnNewsWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9837FBE02480B10400BB7F99 /* ParentStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */; };
 		9837FBE22480B55400BB7F99 /* ParentStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */; };
 		9837FBE42480BB2800BB7F99 /* PageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FBE32480BB2800BB7F99 /* PageType.swift */; };
@@ -52,7 +59,28 @@
 			remoteGlobalIDString = 980A4ABC24757E5100148FBD;
 			remoteInfo = yahn;
 		};
+		981A789224F6A66C00C4D54B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 980A4AB524757E5100148FBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 981A788324F6A66900C4D54B;
+			remoteInfo = yahnNewsWidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		981A789524F6A66C00C4D54B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				981A789424F6A66C00C4D54B /* yahnNewsWidgetsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E20232EA2FC2E3FB9E76985 /* Pods_yahn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yahn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +104,13 @@
 		980A4AF324758ECC00148FBD /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		980A4AF6247590EC00148FBD /* HNWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNWorker.swift; sourceTree = "<group>"; };
 		980A4AFA2475980800148FBD /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		981A788424F6A66900C4D54B /* yahnNewsWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = yahnNewsWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		981A788524F6A66900C4D54B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		981A788724F6A66900C4D54B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		981A788A24F6A66900C4D54B /* yahnNewsWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yahnNewsWidgets.swift; sourceTree = "<group>"; };
+		981A788C24F6A66900C4D54B /* yahnNewsWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = yahnNewsWidgets.intentdefinition; sourceTree = "<group>"; };
+		981A788D24F6A66C00C4D54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		981A788F24F6A66C00C4D54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9837FBDF2480B10400BB7F99 /* ParentStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentStoriesView.swift; sourceTree = "<group>"; };
 		9837FBE12480B55400BB7F99 /* ParentStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentStoriesViewModel.swift; sourceTree = "<group>"; };
 		9837FBE32480BB2800BB7F99 /* PageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageType.swift; sourceTree = "<group>"; };
@@ -122,6 +157,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		981A788124F6A66900C4D54B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A788824F6A66900C4D54B /* SwiftUI.framework in Frameworks */,
+				981A788624F6A66900C4D54B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +175,8 @@
 				0E20232EA2FC2E3FB9E76985 /* Pods_yahn.framework */,
 				EC73FF8D856DA7E225FBDCD9 /* Pods_yahnTests.framework */,
 				6844F5BD27F70C0E2C5801AA /* Pods_yahnUITests.framework */,
+				981A788524F6A66900C4D54B /* WidgetKit.framework */,
+				981A788724F6A66900C4D54B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +187,7 @@
 				980A4ABF24757E5100148FBD /* yahn */,
 				980A4AD624757E5300148FBD /* yahnTests */,
 				980A4AE124757E5300148FBD /* yahnUITests */,
+				981A788924F6A66900C4D54B /* yahnNewsWidgets */,
 				980A4ABE24757E5100148FBD /* Products */,
 				E788EAB5537C477A127BAD91 /* Pods */,
 				603EA478C0ADB0E07BF2B09F /* Frameworks */,
@@ -153,6 +200,7 @@
 				980A4ABD24757E5100148FBD /* yahn.app */,
 				980A4AD324757E5300148FBD /* yahnTests.xctest */,
 				980A4ADE24757E5300148FBD /* yahnUITests.xctest */,
+				981A788424F6A66900C4D54B /* yahnNewsWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +290,17 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		981A788924F6A66900C4D54B /* yahnNewsWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				981A788A24F6A66900C4D54B /* yahnNewsWidgets.swift */,
+				981A788C24F6A66900C4D54B /* yahnNewsWidgets.intentdefinition */,
+				981A788D24F6A66C00C4D54B /* Assets.xcassets */,
+				981A788F24F6A66C00C4D54B /* Info.plist */,
+			);
+			path = yahnNewsWidgets;
+			sourceTree = "<group>";
+		};
 		9845446324778C5800B4AD83 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,10 +370,12 @@
 				980A4ABA24757E5100148FBD /* Frameworks */,
 				980A4ABB24757E5100148FBD /* Resources */,
 				A0346513474D1DC95FC72A80 /* [CP] Embed Pods Frameworks */,
+				981A789524F6A66C00C4D54B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				981A789324F6A66C00C4D54B /* PBXTargetDependency */,
 			);
 			name = yahn;
 			productName = yahn;
@@ -359,13 +420,30 @@
 			productReference = 980A4ADE24757E5300148FBD /* yahnUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		981A788324F6A66900C4D54B /* yahnNewsWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981A789824F6A66C00C4D54B /* Build configuration list for PBXNativeTarget "yahnNewsWidgetsExtension" */;
+			buildPhases = (
+				981A788024F6A66900C4D54B /* Sources */,
+				981A788124F6A66900C4D54B /* Frameworks */,
+				981A788224F6A66900C4D54B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yahnNewsWidgetsExtension;
+			productName = yahnNewsWidgetsExtension;
+			productReference = 981A788424F6A66900C4D54B /* yahnNewsWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		980A4AB524757E5100148FBD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Faiz Mokhtar";
 				TargetAttributes = {
@@ -379,6 +457,9 @@
 					980A4ADD24757E5300148FBD = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 980A4ABC24757E5100148FBD;
+					};
+					981A788324F6A66900C4D54B = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -398,6 +479,7 @@
 				980A4ABC24757E5100148FBD /* yahn */,
 				980A4AD224757E5300148FBD /* yahnTests */,
 				980A4ADD24757E5300148FBD /* yahnUITests */,
+				981A788324F6A66900C4D54B /* yahnNewsWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +506,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981A788224F6A66900C4D54B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A788E24F6A66C00C4D54B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +625,7 @@
 				980A4AF224758EB400148FBD /* StoriesView.swift in Sources */,
 				98905BAA2479FD92003BB6C6 /* HeaderView.swift in Sources */,
 				980A4AC124757E5100148FBD /* AppDelegate.swift in Sources */,
+				981A789124F6A66C00C4D54B /* yahnNewsWidgets.intentdefinition in Sources */,
 				9837FBE42480BB2800BB7F99 /* PageType.swift in Sources */,
 				980A4AC324757E5100148FBD /* SceneDelegate.swift in Sources */,
 				98905BA824799443003BB6C6 /* CommentView.swift in Sources */,
@@ -559,6 +650,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		981A788024F6A66900C4D54B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A789024F6A66C00C4D54B /* yahnNewsWidgets.intentdefinition in Sources */,
+				981A788B24F6A66900C4D54B /* yahnNewsWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -571,6 +671,11 @@
 			isa = PBXTargetDependency;
 			target = 980A4ABC24757E5100148FBD /* yahn */;
 			targetProxy = 980A4ADF24757E5300148FBD /* PBXContainerItemProxy */;
+		};
+		981A789324F6A66C00C4D54B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 981A788324F6A66900C4D54B /* yahnNewsWidgetsExtension */;
+			targetProxy = 981A789224F6A66C00C4D54B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,6 +809,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C48FE56132D18AF60870F6F3 /* Pods-yahn.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
@@ -728,6 +834,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ABFDB0E0701BFD98322F6308 /* Pods-yahn.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
@@ -836,6 +943,52 @@
 			};
 			name = Release;
 		};
+		981A789624F6A66C00C4D54B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96ZJY6AYCD;
+				INFOPLIST_FILE = yahnNewsWidgets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahackernews.yahnNewsWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		981A789724F6A66C00C4D54B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96ZJY6AYCD;
+				INFOPLIST_FILE = yahnNewsWidgets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faizmokhtar.yahackernews.yahnNewsWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -871,6 +1024,15 @@
 			buildConfigurations = (
 				980A4AEE24757E5300148FBD /* Debug */,
 				980A4AEF24757E5300148FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981A789824F6A66C00C4D54B /* Build configuration list for PBXNativeTarget "yahnNewsWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981A789624F6A66C00C4D54B /* Debug */,
+				981A789724F6A66C00C4D54B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
