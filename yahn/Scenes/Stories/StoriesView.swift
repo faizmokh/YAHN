@@ -42,11 +42,12 @@ struct StoriesView: View {
             Button(action: viewModel.loadMore) {
                 GeometryReader { reader in
                     HStack(alignment: .center) {
+                        Spacer()
                         Text("Load more")
                             .font(.callout)
                             .fontWeight(.heavy)
+                        Spacer()
                     }
-                    .frame(width: reader.size.width, height: 50, alignment: .center)
                 }
                 .padding(.vertical, 25)
             }
