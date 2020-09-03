@@ -13,7 +13,7 @@ class StoriesViewModel: ObservableObject {
 
     let worker: HNWorker
 
-    @Published var stories: [Story] = [Story]()
+    @Published var stories: [Story]?
     private var nextLink: String?
 
     init(worker: HNWorker) {
@@ -37,7 +37,7 @@ class StoriesViewModel: ObservableObject {
         worker.fetchMoreStories(link: nextLink) { result in
             switch result {
             case .success(let stories, let linkForMore):
-                self.stories.append(contentsOf: stories)
+                self.stories?.append(contentsOf: stories)
                 self.nextLink = linkForMore
             case .failure(let error):
                 print(error)

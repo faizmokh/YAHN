@@ -26,3 +26,19 @@ struct Story: Identifiable {
     let commentCount: Int
     let type: StoryType
 }
+
+extension Story {
+  var isJobPost: Bool {
+    return type == .jobs && url != nil
+  }
+}
+
+let staticStory = Story(
+  id: "1", title: "Ask HN: How deep is your love?",
+  url: URL(string: "faizmokhtar.com"),
+  domain: "faizmokhtar.com",
+  points: 100,
+  username: "faizmokh",
+  relativeTime: "test date",
+  commentCount: 100,
+  type: .asks)

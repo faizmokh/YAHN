@@ -16,6 +16,8 @@ struct StoriesView: View {
 
     private var selected: Int
 
+    private let loadingPlaceholders = Array(repeating: staticStory, count: 10)
+
     init(viewModel: StoriesViewModel, selected: Int = 0) {
         self.viewModel = viewModel
         self.selected = selected
@@ -23,13 +25,14 @@ struct StoriesView: View {
 
     var body: some View {
         List {
-            ForEach(viewModel.stories) { story in
-                if story.type != .jobs {
+            ForEach(viewModel.stories ?? loadingPlaceholders) { story in
+                if !story.isJobPost {
                     NavigationLink(destination:
                     CommentsView(viewModel: CommentsViewModel(story: story))) {
                         StoryView(story: story)
+                          .redacted(reason: story == nil ? .placeholder : [])
                     }
-                } else if story.url != nil {
+                } else {
                     Button(action: {
                         self.isPresented.toggle()
                     }) {
