@@ -31,10 +31,14 @@ extension Story {
   var isJobPost: Bool {
     return type == .jobs && url != nil
   }
+
+  var isPlaceholder: Bool {
+    return id == "placeholder"
+  }
 }
 
 let staticStory = Story(
-  id: "1", title: "Ask HN: How deep is your love?",
+  id: "placeholder", title: "Ask HN: How deep is your love?",
   url: URL(string: "faizmokhtar.com"),
   domain: "faizmokhtar.com",
   points: 100,

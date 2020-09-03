@@ -30,7 +30,7 @@ struct StoriesView: View {
                     NavigationLink(destination:
                     CommentsView(viewModel: CommentsViewModel(story: story))) {
                         StoryView(story: story)
-                          .redacted(reason: story == nil ? .placeholder : [])
+                          .redacted(reason: story.isPlaceholder ? .placeholder : [])
                     }
                 } else {
                     Button(action: {
@@ -41,7 +41,7 @@ struct StoriesView: View {
                         SafariView(url: story.url!)
                     }
                 }
-            }
+            }.animation(nil)
             Button(action: viewModel.loadMore) {
                 GeometryReader { reader in
                     HStack(alignment: .center) {
@@ -55,7 +55,9 @@ struct StoriesView: View {
                 .padding(.vertical, 25)
             }
             .buttonStyle(SecondaryButtonStyle())
-        }.listStyle(PlainListStyle())
+        }
+        .animation(nil)
+        .listStyle(PlainListStyle())
         .onAppear(perform: {
             self.viewModel.fetchStories()
         })
